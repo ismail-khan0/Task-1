@@ -1,26 +1,50 @@
-import React from 'react';
-import Shap1 from './img/Shape (1).svg';
-import Shap from './img/Shape.svg';
-import pic from './img/Pic1.png';
-import pic2 from './img/pic2.png';
-import pic3 from './img/pic3.png';
-import pic4 from './img/Vector.svg';
+import React, { useState } from 'react';
+import Shap1 from '../img/Shape (1).svg';
+import Shap from '../img/Shape.svg';
+import pic from '../img/Pic1.png';
+import pic2 from '../img/pic2.png';
+import pic3 from '../img/pic3.png';
+import pic4 from '../img/Vector.svg';
 import Navbar from './Navbar';
 
 const Herosection = () => {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+  };
+
   return (
     <section className="flex flex-wrap w-full min-h-screen relative">
       <div className="absolute w-full z-20">
         <Navbar />
       </div>
-    
+
       <div className="flex-1 bg-white flex flex-col sm:flex-row py-16 sm:py-24 px-4">
         <div className="space-y-4 mx-4">
-          <h1 className="text-4xl sm:text-5xl font-bold my-6">
-            Discover New <br /> Collection <span className="text-yellow-500">🌞</span>
-          </h1>
+          {/* Main Heading with Toggle Button */}
+          <div className="relative">
+            <h1 className="text-4xl sm:text-5xl font-bold my-6 flex items-center">
+              Discover New <br />
+              Collection
+              {/* Toggle Button */}
+              <div
+                className={`w-16 h-8 flex items-center cursor-pointer rounded-full p-1  mt-16 transition-all duration-300 ${
+                  isToggled ? 'bg-yellow-500' : 'bg-gray-300'
+                }`}
+                onClick={handleToggle}
+              >
+                <div
+                  className={`w-6 h-6 rounded-full shadow-md transition-transform transform ${
+                    isToggled ? 'translate-x-8 bg-white' : 'translate-x-0 bg-yellow-400'
+                  }`}
+                ></div>
+              </div>
+            </h1>
+          </div>
+
           <div className="flex space-x-0 sm:space-x-12 mt-16 flex-col sm:flex-row">
-            <div className="w-32 h-[2px] bg-black mt-2"></div>
+            <div className="w-32 h-[2px] bg-black mt-2 hidden sm:block"></div>
             <p className="text-center sm:text-left">
               Fashion is part of the daily air <br /> and it changes all the time, <br /> with all the events.
             </p>
@@ -32,7 +56,7 @@ const Herosection = () => {
               Start Shopping →
             </button>
             <div className="ml-8 hidden sm:block">
-              <img src={pic4} className="w-12 h-12" />
+              <img src={pic4} className="w-12 h-12" alt="icon" />
             </div>
           </div>
 
@@ -53,14 +77,12 @@ const Herosection = () => {
 
       <div className="flex-1 flex-col bg-gray-100 flex items-center justify-center relative">
         <div className="absolute top-1/4 right-1/4 flex items-center space-x-2 text-6xl font-bold">
-          <img src={Shap} />
-          <img src={Shap1} />
+          <img src={Shap} alt="shape" />
+          <img src={Shap1} alt="shape1" />
         </div>
-        
-        <div className="flex items-center mt-32 ml-auto">  
-          <div className="flex items-center text-[#FCBD01] mr-2 text-xl">
-            01
-          </div>
+
+        <div className="flex items-center mt-32 ml-auto">
+          <div className="flex items-center text-[#FCBD01] mr-2 text-xl">01</div>
           <div className="flex flex-col mt-20">
             <div className="w-[2px] h-12 bg-[#FCBD01] mr-32 mt-16"></div>
             <div className="w-[2px] h-28 bg-[#FCBD0133]"></div>
