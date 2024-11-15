@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Herosection from './Herosection';
-import Feature from './Feature';
+import Herosection from './Components/Herosection';
+import Feature from './Components/Feature';
 
 function App() {
   return (

@@ -1,18 +1,18 @@
 import React from 'react';
-import Cap from './img/Cap.jpeg';
-import Perfume from './img/Perfum.jpeg';
-import Shoes from './img/Shoes.png';
+import Cap from '../img/Cap.jpeg';
+import Perfume from '../img/Perfum.jpeg';
+import Shoes from '../img/Shoes.png';
 
 const Feature = () => {
   return (
     <section className="bg-[#796EFF] py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
         
-        {/* Left Side - Product Cards */}
+      
         <div className="md:w-1/2">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Product 1 */}
+     
             <div className="flex flex-col items-center bg-white rounded-lg shadow-lg p-6 w-full h-64 transform transition-transform duration-300 hover:-translate-y-4">
               <img
                 src={Cap}

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
 const Navbar = () => {
-  // State to manage mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -34,8 +32,6 @@ const Navbar = () => {
           🔍
         </button>
       </div>
-
-      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button 
           className="text-gray-700"
