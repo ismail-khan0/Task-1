@@ -89,7 +89,7 @@ const Herosection = () => {
             01
           </div>
           <div className="flex flex-col mt-20">
-            <div className="w-[2px] h-12 bg-[#FCBD01] mr-40 mt-16"></div>
+            <div className="w-[2px] h-12 bg-[#FCBD01] lg:mr-40 mr-28 mt-16"></div>
             <div className="w-[2px] h-28 bg-[#FCBD0133]"></div>
           </div>
         </div>
