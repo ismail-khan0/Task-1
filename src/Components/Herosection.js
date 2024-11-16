@@ -79,7 +79,7 @@ const Herosection = () => {
       </div>
 
       <div className="flex-1 flex-col bg-gray-100 flex items-center justify-center relative">
-        <div className="absolute top-1/4 right-1/4 flex items-center space-x-2 text-6xl font-bold">
+        <div className="absolute top-1/4 right-1/4 flex items-center mr-1 space-x-2 text-6xl font-bold">
           <img src={Shap} alt="shape" />
           <img src={Shap1} alt="shape1" />
         </div>
@@ -89,7 +89,7 @@ const Herosection = () => {
             01
           </div>
           <div className="flex flex-col mt-20">
-            <div className="w-[2px] h-12 bg-[#FCBD01] mr-32 mt-16"></div>
+            <div className="w-[2px] h-12 bg-[#FCBD01] mr-40 mt-16"></div>
             <div className="w-[2px] h-28 bg-[#FCBD0133]"></div>
           </div>
         </div>
