@@ -27,7 +27,7 @@ const Herosection = () => {
               Discover New <br />
               Collection
               <div
-                className={`w-16 h-8 flex items-center cursor-pointer rounded-full p-1  mt-12 transition-all duration-300 ${
+                className={`w-16 h-8 flex items-center cursor-pointer rounded-full p-1  mt-12 lg:mt-16 transition-all duration-300 ${
                   isToggled ? "bg-yellow-500" : "bg-gray-300"
                 }`}
                 onClick={handleToggle}
